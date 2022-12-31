@@ -1,0 +1,19 @@
+@use './scss/abstracts/variables';
+
+@use './scss/base/base';
+@use './scss/base/resets';
+
+//Estilos app
+@use './scss/app.scss';
+//Estilos navbar
+@use './scss/components/Navbar.scss';
+//Estilos Frontpage
+@use './scss/components/FrontPage.scss';
+//Estilos Stack
+@use './scss/components/Stack.scss';
+//Estilos Porfolio
+@use './scss/components/Porfolio.scss';
+//Estilos AboutMe
+@use './scss/components/AboutMe.scss';
+//Estilos ExtraAbilities
+@use './scss/components/ExtraAbilities.scss';

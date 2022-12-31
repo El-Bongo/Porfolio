@@ -1,0 +1,78 @@
+.porfolio_container{
+    border-right: 3px solid var(--dark-second);
+    margin-right: calc(14vw + 6px);
+
+    h2{
+        text-align: center;
+        padding: 80px;
+        font-weight: 500;
+    }
+
+    .porfolio_cards{
+        display: flex;
+        justify-content: space-evenly;
+
+        .porfolio_card{
+            height: 70vh;
+        
+            .porfolio_imagedet{
+                position: relative;
+                width: 20vw;
+                height: 80%;
+                overflow: hidden;
+                
+                section{
+                    position: absolute;
+                    width: 95%;
+                    height: 95%;
+                    background-color: var(--green-detail);
+                    bottom: 0;
+                    right: 0;
+                }
+
+                .porfolio_imgzoomeffect{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 95%;
+                    height: 95%;
+                    z-index: 2;
+                    overflow: hidden;
+
+                    img{
+                        object-fit: cover;
+                        filter: brightness(60%);
+                        width: 100%;
+                        height: 100%;
+                        transition: all 1s ease;
+                        cursor: pointer;
+                    }
+                    img:hover{
+                        filter: brightness(90%);
+                        transform: scale(1.1);
+                    }
+                }
+            }
+            .porfolio_info{
+                
+
+                h3{
+                    text-align: center;
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+    .porfolio_seemore{
+        display: flex;
+        justify-content: center;
+
+        padding: 20px 0 20px 0;
+        a{
+            padding: 10px;
+            font-weight: 500;
+            font-size: larger;
+            color: var(--green-detail);
+        }
+    }
+}

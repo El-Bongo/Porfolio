@@ -1,0 +1,40 @@
+.navbar_container{
+    padding: 20px 0 20px 0;
+    position: fixed;
+    right: 0;
+    width: 14vw;
+    height: 100vh;
+    background-color: var(--dark-second);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+
+    .navbar_bulletcontainer{
+        display: flex;
+        flex-direction: row-reverse;
+        color: var(--white-main);
+
+        .navbar_bulletlist{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            margin-right: 25px;
+            li{
+                cursor: pointer;
+                transition: 0.1s all ease;
+                width: 12px;
+                height: 12px;
+                background-color: var(--white-main);
+            }
+            li:hover, .navbar_bulletlist_selected{
+                transform: scale(1.3);
+                transform: rotate(45deg);
+                background-color: var(--green-detail);
+            }
+        }
+    }
+    
+
+}

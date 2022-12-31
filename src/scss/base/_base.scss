@@ -1,0 +1,11 @@
+html, body{
+    font-family: var(--font-poppins);
+    background-color: var(--white-main);
+}
+body{
+    overflow-y: scroll;
+    position: relative;
+}
+p{
+    font-size: 15px;
+}

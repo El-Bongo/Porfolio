@@ -1,0 +1,40 @@
+.aboutme_container{
+    background-color: var(--dark-second);
+    margin-right: calc(14vw + 6px);
+    color: var(--white-main);
+
+    h2{
+        text-align: center;
+        padding: 10px;
+    }
+    div{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        width: 85%;
+        margin: auto;
+        padding: 20px;
+
+        .aboutme_image{
+            position: relative;
+            width: 250px;
+            height: 150px;
+
+            .aboutme_arrow{
+                position: absolute;
+                top: -70px;
+                left: 0px;
+                z-index: 1;
+            }
+            img{
+                position: absolute;
+                width: 150px;
+                bottom: 0;
+                right: 0;
+            }
+        }
+        p{
+            width: 70%;
+        }
+    }
+}
