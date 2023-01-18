@@ -4,6 +4,7 @@ import Porfolio from "./components/Porfolio/Porfolio";
 import MyStack from "./components/MyStack/MyStack";
 import AboutMe from "./components/AboutMe/AboutMe"
 import ExtraAbilities from "./components/ExtraAbilities/ExtraAbilities";
+import ContactMe from "./components/ContactMe/ContactMe";
 
 function App() {
 
@@ -15,6 +16,7 @@ function App() {
       <Porfolio/>
       <AboutMe/>
       <ExtraAbilities/>
+      <ContactMe/>
     </div>
   );
 }

@@ -3,7 +3,7 @@ import cararrow from "../../images/cararrow.svg"
 
 function AboutMe () {
     return(
-        <div className='aboutme_container'>
+        <div className='aboutme_container section' id="sectionAbout">
             <h2>Acerca de mi</h2>
             <div>
                 <div className='aboutme_image'>

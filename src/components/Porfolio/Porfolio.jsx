@@ -4,7 +4,7 @@ import code from "../../images/code.png"
 
 function Porfolio(){
     return(
-        <div className='porfolio_container'>
+        <div className='porfolio_container section' id="sectionPorfolio">
             <h2>Porfolio</h2>
             <div className='porfolio_cards'>
                 <div className='porfolio_card'>

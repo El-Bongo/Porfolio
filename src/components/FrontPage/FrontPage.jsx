@@ -4,7 +4,7 @@ function FrontPage(){
     return(
         <>
             <div className='frontpage_container'>
-                <div className='frontpage_textcontainer'>
+                <div className='frontpage_textcontainer section' id="sectionHome">
                     <div className='frontpage_maintext'>
                         <h1>Nicolás Hernán Silva</h1>
                         <h2>Desarrollador web fullstack</h2>

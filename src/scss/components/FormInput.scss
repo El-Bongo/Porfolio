@@ -1,0 +1,25 @@
+.form_container{
+    width: 30vw;
+    position: relative;
+    padding-bottom: 30px;
+    .error{
+        color: red;
+        font-weight: 600;
+        font-size: 12px;
+        position: absolute;
+    }
+    input{
+        padding-left: 3px;
+        height: 30px;
+        outline: none;
+        background-color: var(--white-main);
+        width: 100%;
+        border: none;
+        border-bottom: 1px solid rgb(121, 121, 121);
+        transition: 0.3s all;
+    }
+    input:focus{
+        background-color: rgb(230, 230, 230);
+        border-bottom: 1px solid var(--dark-second);
+    }
+}

@@ -10,31 +10,53 @@
     justify-content: space-between;
     align-items: center;
     z-index: 2;
-
-    .navbar_bulletcontainer{
+    
+    .nav-scrollspy{
+        position: fixed;
+        top: 50%;
+        right: 0;
+        transform: translate(0, -50%);
         display: flex;
         flex-direction: row-reverse;
-        color: var(--white-main);
+        align-items: center;
+        width: 180px;
+        height: 40vh;
 
-        .navbar_bulletlist{
+        section{
+            margin-left: 20px;
+            width: 30px;
+            height: 90%;
+            justify-content: space-around;
+            align-items: center;
             display: flex;
             flex-direction: column;
+        }
+        nav{
+            width: 120px;
+            height: 90%;
             justify-content: space-around;
-            margin-right: 25px;
-            li{
-                cursor: pointer;
-                transition: 0.1s all ease;
-                width: 12px;
-                height: 12px;
-                background-color: var(--white-main);
-            }
-            li:hover, .navbar_bulletlist_selected{
-                transform: scale(1.3);
-                transform: rotate(45deg);
-                background-color: var(--green-detail);
-            }
+            display: flex;
+            flex-direction: column;
         }
     }
-    
-
+    .nav-link{
+        margin: 3px;
+        height: 30px;
+        color: aliceblue;
+    }
+    .nav-cuadrao{
+        background-color: aliceblue;
+        display: block;
+        text-decoration: none;
+        width:10px;
+        height: 10px;
+        transition: 0.3s all;
+      }
+    .active{
+    color: #42CEB5;
+    }
+    .activefig{
+    transform: rotate(45deg);
+    background-color: #42CEB5;
+    }
 }

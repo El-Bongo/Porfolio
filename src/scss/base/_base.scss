@@ -1,6 +1,7 @@
 html, body{
     font-family: var(--font-poppins);
     background-color: var(--white-main);
+    scroll-behavior: smooth;
 }
 body{
     overflow-y: scroll;

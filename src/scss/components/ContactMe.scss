@@ -1,0 +1,10 @@
+.form_main{
+    border: 3px solid var(--dark-second);
+    border-left: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 120px 0 120px 0 ;
+    margin-right: calc(14vw + 6px);
+}

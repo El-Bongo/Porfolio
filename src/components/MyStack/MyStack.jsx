@@ -47,7 +47,7 @@ function Stack() {
     }
 
     return(
-        <div className='stack_container'>
+        <div className='stack_container section' id="sectionStack">
             <h2>Mi stack de tecnologías</h2>
             <div className='stack_slidercontainer'>
                 <Slider {...settings}>

@@ -1,3 +1,7 @@
+$orbitItemSize: 2.5em;
+$map: (ring-0: 3, ring-1: 4);
+$lastRing: 1;
+
 .extra_container{
     border-right: 3px solid var(--dark-second);
     margin-right: calc(14vw + 6px);
@@ -20,6 +24,108 @@
             width: 300px;
             height: 300px;
             border-radius: 50%;
+            position: relative;
+
+            .orbit-icon {
+                width: $orbitItemSize;
+                height: $orbitItemSize;
+                line-height: $orbitItemSize;
+                font-size: 1.2em;
+                text-align: center;
+                display: block;
+              }
+              
+              .orbit-wrap {
+                height: 20em;
+                list-style: none;
+                font-size: 1.3em;
+                
+                > li {
+                  position: absolute;
+                  left: 50%;
+                  top: 50%;
+                  transform: translate(-50%, -50%);  
+                }
+              }
+              
+              ul[class^=ring] {
+                @extend %ring;
+                transition: all 300ms ease-in-out;
+                li {
+                  @extend %orbiting-object;
+                  transition: all 300ms ease-in-out;
+                }
+              }
+              
+              @mixin orbit-item($numItems, $numRing) {
+                @for $s from 1 through $numItems {  
+                  // Spread items over the ring
+                  $deg: 380deg / $numItems;
+                  
+                  .ring-#{$numRing} > *:nth-of-type(#{$s}) {
+                    transform: rotate($s * $deg) translate(4em) rotate(-$s * $deg);
+                  }
+                }
+              }
+              
+              // Render rings
+              @for $i from 0 through $lastRing {  
+                .ring-#{$i} {
+                  width: 15em;
+                  height: 15em ;
+                  animation: clockwiseRotate 20s linear infinite;
+                  
+                  img {
+                    animation: counterClockwiseRotate 20s linear infinite;
+                  }
+                }
+                
+                @include orbit-item(map-get($map, ring-#{$i}), $i);
+              }
+              
+              
+              %ring {
+                // border: solid 1px var(--green-detail);
+                box-shadow: 0px 0px 10px 0px var(--green-detail);
+                position: relative;
+                padding: 0;
+                border-radius: 50%;
+                list-style: none;
+                box-sizing: content-box;
+              }
+              
+              %orbiting-object {
+                display: block;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: $orbitItemSize;
+                height: $orbitItemSize;
+                margin: -$orbitItemSize / 1.5;
+              }
+              /* 
+              animations 
+              */
+              @keyframes clockwiseRotate {
+                  from {
+                      transform: rotate(0deg)
+                  }
+                  to {
+                      transform: rotate(360deg)
+                  }
+              }
+              
+              @keyframes counterClockwiseRotate {
+                0% {
+                  transform: rotate(0deg);
+                }
+                100% {
+                    transform: rotate(-360deg);
+                }
+              }
+
+
         }
     }
 }
+

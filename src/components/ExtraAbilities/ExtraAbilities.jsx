@@ -1,7 +1,14 @@
+import csharp from "../../images/StackLogos/Extras/csharp.svg"
+import cplus from "../../images/StackLogos/Extras/cplus.svg"
+import figma from "../../images/StackLogos/Extras/figma.svg"
+import jira from "../../images/StackLogos/Extras/jira.svg"
+import notion from "../../images/StackLogos/Extras/notion.svg"
+import php from "../../images/StackLogos/Extras/php.svg"
+import xml from "../../images/StackLogos/Extras/xml.svg"
 
 function ExtraAbilities(){
     return(
-        <div className='extra_container'>
+        <div className='extra_container section' id="sectionExtras">
             <div className='extra_holder'>
                 <div className='extra_list'>
                     <h2>Habilidades extra</h2>
@@ -17,17 +24,29 @@ function ExtraAbilities(){
                     </ul>
                 </div>
                 <div className='extra_rotation'>
-                    <img src="" alt="" />
-                    <img src="" alt="" />
-                    <img src="" alt="" />
-                    <img src="" alt="" />
+                    <ul className="orbit-wrap">
+                        <li>
+                            <ul className="ring-1">
+                                <li><img className="orbit-icon" src={xml}/></li>
+                                <li><img className="orbit-icon" src={jira}/></li>
+                                <li><img className="orbit-icon" src={notion}/></li>
+                                <li><img className="orbit-icon" src={figma}/></li>
+                            </ul>             
+                        </li>
+                    </ul>
                 </div>
             </div>
             <div className='extra_holder'>
                 <div className='extra_rotation'>
-                    <img src="" alt="" />
-                    <img src="" alt="" />
-                    <img src="" alt="" />
+                    <ul className="orbit-wrap">
+                        <li>
+                            <ul className="ring-0">
+                                <li><img className="orbit-icon" src={php}/></li>
+                                <li><img className="orbit-icon" src={csharp}/></li>
+                                <li><img className="orbit-icon" src={cplus}/></li>
+                            </ul>
+                        </li>
+                    </ul>
                 </div>
                 <div className='extra_text'>
                     <h2>Tecnologías objetivo</h2>
