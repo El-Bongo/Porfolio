@@ -1,5 +1,11 @@
-import React, { useEffect, useState } from "react";
+import * as ReactDOM from 'react-dom';
+import React, { useEffect, useState} from "react";
 import logo from "../../images/Logo.svg"
+import discord from "../../images/Social/discord.svg"
+import github from "../../images/Social/github.svg"
+import linkedin from "../../images/Social/linkedin.svg"
+
+
 
 function NavBar(){
 
@@ -37,6 +43,13 @@ function NavBar(){
       }
     });
   }, [activeSection]);
+
+  useEffect(() => {
+    const navLinks = document.querySelectorAll('.nav-link');
+    navLinks[0].classList.add('active');
+    const navCuadrao = document.querySelectorAll('.nav-cuadrao');
+    navCuadrao[0].classList.add('activefig');
+  }, []);
     return(
         <div className=' navbar_container '>
             <img src={logo} alt="logo de la pagina" />
@@ -58,8 +71,12 @@ function NavBar(){
                     <a className="nav-cuadrao" href="#sectionContact"></a>
                 </section>
             </div>
-            <div>
-                <p>Links a redes</p>
+            <div className="navbar_social">
+                <ul>
+                  <li><a href="https://www.discord.com/users/360895618966880259"><img src={discord} alt="logo discord"/></a></li>
+                  <li><a href="https://www.linkedin.com/in/nicolas-silva/"><img src={linkedin} alt="logo linkedin"/></a></li>
+                  <li><a href="https://github.com/Koppeks"><img src={github} alt="logo github"/></a></li>
+                </ul>
             </div>
         </div>
     )

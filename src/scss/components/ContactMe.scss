@@ -7,4 +7,27 @@
     align-items: center;
     padding: 120px 0 120px 0 ;
     margin-right: calc(14vw + 6px);
+    
+    .form_container{
+        position: relative;        
+        
+        .button{
+            color: var(--dark-second);
+            font-weight: 500;
+            width: 40%;
+            height: 5vh;
+            position: absolute;
+            bottom: -20px;
+            right: 0;
+            border: 1px solid;
+            border-radius: 0;
+            transition: 0.2s all;
+            cursor: pointer;
+        }
+        .button:hover{
+            background-color: var(--dark-second);
+            color: var(--white-main);
+            border: 0;
+        }
+    }
 }

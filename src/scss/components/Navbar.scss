@@ -12,20 +12,16 @@
     z-index: 2;
     
     .nav-scrollspy{
-        position: fixed;
-        top: 50%;
-        right: 0;
-        transform: translate(0, -50%);
         display: flex;
         flex-direction: row-reverse;
         align-items: center;
         width: 180px;
-        height: 40vh;
+        height: 35vh;
 
         section{
             margin-left: 20px;
             width: 30px;
-            height: 90%;
+            height: 100%;
             justify-content: space-around;
             align-items: center;
             display: flex;
@@ -33,19 +29,17 @@
         }
         nav{
             width: 120px;
-            height: 90%;
+            height: 100%;
             justify-content: space-around;
             display: flex;
-            flex-direction: column;
+            flex-direction: column; 
         }
     }
     .nav-link{
-        margin: 3px;
-        height: 30px;
-        color: aliceblue;
+        color: var(--white-main);
     }
     .nav-cuadrao{
-        background-color: aliceblue;
+        background-color: var(--white-main);
         display: block;
         text-decoration: none;
         width:10px;
@@ -59,4 +53,41 @@
     transform: rotate(45deg);
     background-color: #42CEB5;
     }
+
+    .navbar_social{
+        width: 100%;
+
+        ul{
+            display: flex;
+            width: 100%;
+            justify-content: space-evenly;
+            
+            li{
+                width: 40px;
+                height: 40px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+        
+
+        img{
+            width: 30px;
+            transition: 0.3s all;
+        }
+        img:hover{
+            animation-name: pulse;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in-out;
+        }
+        @keyframes pulse {
+            0%{transform: scale(1);}
+            50%{transform: scale(1.2);}
+            100%{transform: scale(1);}
+        }
+    }
+
+
 }

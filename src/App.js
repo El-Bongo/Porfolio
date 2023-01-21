@@ -5,6 +5,7 @@ import MyStack from "./components/MyStack/MyStack";
 import AboutMe from "./components/AboutMe/AboutMe"
 import ExtraAbilities from "./components/ExtraAbilities/ExtraAbilities";
 import ContactMe from "./components/ContactMe/ContactMe";
+import Footer from "./components/Footer/Footer";
 
 function App() {
 
@@ -17,6 +18,7 @@ function App() {
       <AboutMe/>
       <ExtraAbilities/>
       <ContactMe/>
+      <Footer/>
     </div>
   );
 }
