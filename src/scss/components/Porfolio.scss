@@ -1,6 +1,7 @@
 .porfolio_container{
     border-right: 3px solid var(--dark-second);
     margin-right: calc(14vw + 6px);
+    padding-bottom: 150px;
 
     h2{
         text-align: center;
@@ -8,71 +9,155 @@
         font-weight: 500;
     }
 
-    .porfolio_cards{
+    .porfolio_projects{
         display: flex;
-        justify-content: space-evenly;
+        justify-content: space-around;
+        align-items: center;
 
-        .porfolio_card{
-            height: 70vh;
-        
-            .porfolio_imagedet{
+        .projects_name{
+            width: 30%;
+            height: 40vh;
+            padding-left: 10px;
+            border-block-end: 4px solid;
+            border-inline-start: 4px solid;
+            border-image-source: radial-gradient(circle at bottom left,  var(--dark-second), transparent 50%);
+            border-image-slice: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+
+            h3{
+                cursor: pointer;
                 position: relative;
-                width: 20vw;
-                height: 80%;
-                overflow: hidden;
+            }
+            h3::before{
+                content: "";
+                position: absolute;
+                background-color: var(--green-detail);
+                bottom: 0;
+                left: 0;
+                width: 0;
+                height: 2px;
+                transition: 0.3s all;
+            }
+            h3:hover::before{
+                width: 100%;
+            }
+        }
+        .projects_text{
+            width: 60%;
+            height: 40vh;
+            position: relative;
+            border-block-start: 4px solid;
+            border-inline-end: 4px solid;
+            border-image-source: radial-gradient(circle at top right, var(--dark-second), transparent 35%);
+            border-image-slice: 1;
+
+            .project{
+                position: absolute; 
+                top: 50%;
+                transform: translate(0, -50%);
+                left: 0; 
+                right: 0; 
+                margin-left: auto; 
+                margin-right: auto; 
+                width: 40vw;
+                height: 100%;
+                opacity: 0;
+                transition: 0.3s all;
+                display: flex;
+                justify-content: center;
+                align-items: center;
                 
-                section{
+                .project_links{
                     position: absolute;
-                    width: 95%;
-                    height: 95%;
-                    background-color: var(--green-detail);
-                    bottom: 0;
                     right: 0;
-                }
+                    bottom: 0;
+                    padding: 10px;
 
-                .porfolio_imgzoomeffect{
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    width: 95%;
-                    height: 95%;
-                    z-index: 2;
-                    overflow: hidden;
-
-                    img{
-                        object-fit: cover;
-                        filter: brightness(60%);
-                        width: 100%;
-                        height: 100%;
-                        transition: all 1s ease;
-                        cursor: pointer;
-                    }
-                    img:hover{
-                        filter: brightness(90%);
-                        transform: scale(1.1);
+                    a{
+                        padding: 10px;
+                        color: var(--green-detail);
                     }
                 }
             }
-            .porfolio_info{
+            .active{
+                opacity: 1;
+            }
+        }
+
+    }
+
+
+
+
+
+
+    // .porfolio_cards{
+    //     display: flex;
+    //     justify-content: space-evenly;
+
+    //     .porfolio_card{
+    //         height: 70vh;
+        
+    //         .porfolio_imagedet{
+    //             position: relative;
+    //             width: 20vw;
+    //             height: 80%;
+    //             overflow: hidden;
+                
+    //             section{
+    //                 position: absolute;
+    //                 width: 95%;
+    //                 height: 95%;
+    //                 background-color: var(--green-detail);
+    //                 bottom: 0;
+    //                 right: 0;
+    //             }
+
+    //             .porfolio_imgzoomeffect{
+    //                 position: absolute;
+    //                 top: 0;
+    //                 left: 0;
+    //                 width: 95%;
+    //                 height: 95%;
+    //                 z-index: 2;
+    //                 overflow: hidden;
+
+    //                 img{
+    //                     object-fit: cover;
+    //                     filter: brightness(60%);
+    //                     width: 100%;
+    //                     height: 100%;
+    //                     transition: all 1s ease;
+    //                     cursor: pointer;
+    //                 }
+    //                 img:hover{
+    //                     filter: brightness(90%);
+    //                     transform: scale(1.1);
+    //                 }
+    //             }
+    //         }
+    //         .porfolio_info{
                 
 
-                h3{
-                    text-align: center;
-                    font-weight: 400;
-                }
-            }
-        }
-    }
-    .porfolio_seemore{
-        display: flex;
-        justify-content: center;
+    //             h3{
+    //                 text-align: center;
+    //                 font-weight: 400;
+    //             }
+    //         }
+    //     }
+    // }
+    // .porfolio_seemore{
+    //     display: flex;
+    //     justify-content: center;
 
-        padding: 20px 0 20px 0;
-        a{
-            padding: 10px;
-            font-weight: 500;
-            font-size: larger;
-            color: var(--green-detail);
-        }
-    }
+    //     padding: 20px 0 20px 0;
+    //     a{
+    //         padding: 10px;
+    //         font-weight: 500;
+    //         font-size: larger;
+    //         color: var(--green-detail);
+    //     }
+    // }
 }

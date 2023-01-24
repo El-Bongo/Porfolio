@@ -14,7 +14,7 @@ function NavBar(){
   useEffect(() => {
     const sections = document.querySelectorAll('.section');
     function handleScroll() {
-      const scrollPos = window.scrollY + 80;
+      const scrollPos = window.scrollY + (window.innerHeight/3);
       sections.forEach((section) => {
         if (scrollPos >= section.offsetTop && scrollPos < section.offsetTop + section.offsetHeight) {
           setActiveSection(section.id);
