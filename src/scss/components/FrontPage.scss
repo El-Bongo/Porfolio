@@ -1,10 +1,13 @@
     .frontpage_container{
         position: relative;
+        border-right: 3px solid var(--dark-second);
+        border-bottom: 3px solid var(--dark-second);
+        margin-right: calc(14vw + 6px);
     
     .frontpage_textcontainer{
         position: relative;
-        margin-right: 30vw;
-        height: calc(100vh - 6px);
+        margin-right: 5vw;
+        height: calc(100vh - 9px);
         background-color: var(--dark-second);
         -webkit-clip-path: polygon(0 0, 100% 0, 10% 100%, 0% 100%);
         clip-path: polygon(0 0, 100% 0, 10% 100%, 0% 100%);
@@ -43,9 +46,8 @@
     }
     .frontpage_stack{
         position: absolute;
-        right: 14vw;
-        margin-right: 6px;
-        top: 70vh;
+        right: -3px;
+        top: calc(70vh - 6px);
         background-color: var(--dark-second);
         width: 25vw;
         height: 30vh;
