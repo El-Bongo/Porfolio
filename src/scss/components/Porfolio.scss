@@ -92,3 +92,27 @@
 
     }
 }
+
+
+@media screen and (max-width: 1024px) {
+    .porfolio_container{
+        margin-right: calc(17vw + 6px);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .porfolio_container{
+        margin-right: calc(20vw + 6px);
+        padding-bottom: 100px;
+        
+        h2{
+            padding: 50px;
+        }
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .porfolio_container{
+        margin-right: 0px;
+    }
+}

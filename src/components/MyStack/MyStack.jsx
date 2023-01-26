@@ -33,9 +33,22 @@ function Stack() {
         {name:"Tailwind", icon: tailwind},
     ])
 
+    let amount
+    
+    if(window.innerWidth > 1024) {
+        amount = 5 }
+    else if(window.innerWidth < 1024 && window.innerWidth > 769) {
+        amount = 5 }
+    else if(window.innerWidth < 768 && window.innerWidth > 541){
+        amount = 4
+    }else if(window.innerWidth <= 540){
+        amount = 3
+    }
+
+
     const settings = {
       infinite: true,
-      slidesToShow: 5,
+      slidesToShow: amount,
       slidesToScroll: 1,
       autoplay: true,
       speed: 1500,

@@ -4,6 +4,7 @@
     color: var(--white-main);
     margin-right: calc(14vw + 6px);
     
+    
     h4{
         text-align: center;
         padding: 10px;
@@ -25,5 +26,23 @@
     }
     a:hover::after{
         width: 100%;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .footer_container{
+      margin-right: calc(17vw + 6px);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .footer_container{
+      margin-right: calc(20vw + 6px);
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .footer_container{
+      margin-right: 0;
     }
 }

@@ -1,3 +1,5 @@
+@use 'sass:math';
+
 $orbitItemSize: 2.5em;
 $map: (ring-0: 3, ring-1: 4);
 $lastRing: 1;
@@ -60,7 +62,7 @@ $lastRing: 1;
               @mixin orbit-item($numItems, $numRing) {
                 @for $s from 1 through $numItems {  
                   // Spread items over the ring
-                  $deg: 380deg / $numItems;
+                  $deg: math.div(380deg, $numItems);
                   
                   .ring-#{$numRing} > *:nth-of-type(#{$s}) {
                     transform: rotate($s * $deg) translate(4em) rotate(-$s * $deg);
@@ -101,7 +103,7 @@ $lastRing: 1;
                 left: 50%;
                 width: $orbitItemSize;
                 height: $orbitItemSize;
-                margin: -$orbitItemSize / 1.5;
+                margin: math.div(-$orbitItemSize, 1.5);
               }
               /* 
               animations 
@@ -129,3 +131,50 @@ $lastRing: 1;
     }
 }
 
+
+
+
+@media screen and (max-width: 1024px) {
+  .extra_container{
+    margin-right: calc(17vw + 6px);
+  }
+}
+@media screen and (max-width: 768px) {
+  .extra_container{
+    margin-right: calc(20vw + 6px);
+  }
+}
+@media screen and (max-width: 540px) {
+  .extra_container{
+    border: none;
+    margin-right: 0;
+  
+    .extra_holder{
+      flex-direction: column;
+    
+      .extra_text, .extra_list{
+        width: 80%;
+      }
+
+      .extra_rotation{
+          width: 200px;
+          height: 200px;
+
+          .orbit-icon {
+              font-size: 0.9em;
+            }
+            
+            .orbit-wrap {
+              font-size: 0.9em;
+            }
+      }
+    }
+    .extra_holder:nth-child(2){
+      display: flex;
+      flex-direction: column-reverse;
+      justify-content: center; 
+      align-items: center;
+      padding: 20px 0 20px 0;
+    }
+  }
+}

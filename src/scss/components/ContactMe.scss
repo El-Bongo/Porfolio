@@ -1,3 +1,5 @@
+
+
 .form_main{
     border: 3px solid var(--dark-second);
     border-left: none;
@@ -7,6 +9,9 @@
     align-items: center;
     padding: 120px 0 120px 0 ;
     margin-right: calc(14vw + 6px);
+
+
+    
     
     .form_container{
         position: relative;        
@@ -28,6 +33,31 @@
             background-color: var(--dark-second);
             color: var(--white-main);
             border: 0;
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .form_main{
+        margin-right: calc(17vw + 6px);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .form_main{
+        margin-right: calc(20vw + 6px);
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .form_main{
+        padding: 80px 0 50px 0 ;
+        border: none;
+        border-top: 3px solid var(--dark-second);
+        margin-right: 0;
+        .form_container{
+            width: 70vw;
+            position: relative;   
         }
     }
 }

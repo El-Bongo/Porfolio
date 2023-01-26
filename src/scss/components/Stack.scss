@@ -24,6 +24,7 @@
         width: 85%;
         border-left: 2px solid var(--green-detail);
         border-right: 2px solid var(--green-detail);
+        overflow: hidden;
 
         .stack_individual{
 
@@ -33,6 +34,51 @@
             p{
                 padding-top: 10px;
                 text-align: center;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .stack_container{
+        margin-right: calc(17vw + 6px);
+    }
+}
+@media screen and (max-width: 768px) {
+    .stack_container{
+        margin-right: calc(20vw + 6px);
+
+        .stack_slidercontainer{
+            width: 70%;
+
+            .stack_individual{
+
+                img{
+                    margin: auto;
+                    width: 80px;
+                }
+                p{
+                    padding-top: 10px;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 540px) {
+    .stack_container{
+        border-top: 12px solid var(--white-main);
+        margin-top: 0px;
+        margin-right: 0;
+
+        .stack_slidercontainer{
+            width: 70%;
+    
+            .stack_individual{
+    
+                img{
+                    width: 60px;
+                }
             }
         }
     }

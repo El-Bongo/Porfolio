@@ -2,6 +2,7 @@ html, body{
     font-family: var(--font-poppins);
     background-color: var(--white-main);
     scroll-behavior: smooth;
+    max-width: 100vw;
 }
 body{
     overflow-y: scroll;
