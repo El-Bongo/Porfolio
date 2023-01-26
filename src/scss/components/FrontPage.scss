@@ -351,4 +351,11 @@
             }
         }
     }
+    .detail:nth-child(odd){
+        display: none;
+    }
+    .detail:nth-child(even){
+        display: none;
+    }
+
 }
