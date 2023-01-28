@@ -83,7 +83,6 @@
             justify-content: space-between;
             width: 95%;
             flex-direction: column-reverse;
-            height: 85vh;
     
             .aboutme_image{
                 width: 150px;
@@ -94,6 +93,7 @@
             }
             p{
                 width: 90%;
+                margin-bottom: 50px;
             }
         }
     }

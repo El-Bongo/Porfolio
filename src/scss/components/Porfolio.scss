@@ -113,6 +113,49 @@
 
 @media screen and (max-width: 540px) {
     .porfolio_container{
-        margin-right: 0px;
+        border: none;
+        margin-right: 0;
+    
+        .porfolio_projects{
+            flex-direction: column;
+    
+            .projects_name{
+                width: 90%;
+                height: 25vh;
+                border-block-start: 4px solid;
+                border-inline-start: 4px solid;
+                border-image-source: radial-gradient(circle at top left,  var(--dark-second), transparent 30%);
+                flex-direction: column;
+
+            }
+            .projects_text{
+                width: 90%;
+                height: 30vh;
+                border-block-end: 4px solid;
+                border-inline-end: 4px solid;
+                border-image-source: radial-gradient(circle at bottom right, var(--dark-second), transparent 35%);
+    
+                .project{
+                    width: 90%;
+                    
+                    .project_links{
+                        position: absolute;
+                        right: 0;
+                        bottom: 0;
+                        padding: 10px;
+    
+                        a{
+                            padding: 10px;
+                            color: var(--green-detail);
+                        }
+                    }
+                }
+                .active{
+                    opacity: 1;
+                    z-index: 2;
+                }
+            }
+    
+        }
     }
 }
