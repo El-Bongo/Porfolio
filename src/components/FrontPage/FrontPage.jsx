@@ -8,8 +8,11 @@ import succeed from "../../images/succeed.svg"
 import objective from "../../images/objective.svg"
 import contact from "../../images/contact.svg"
 import chatting from "../../images/chatting.svg"
+import { Trans, useTranslation } from "react-i18next"
 
 function FrontPage(){
+
+    const [t, i18n] = useTranslation()
 
     return(
         <>
@@ -17,8 +20,16 @@ function FrontPage(){
                 <div className='frontpage_textcontainer section' id="sectionHome">
                     <div className='frontpage_maintext'>
                         <h1>Nicolás Hernán Silva</h1>
-                        <h2>Desarrollador web fullstack</h2>
-                        <p>Descubrí la programación y diseño hace 5 años, todo comenzo como un hobbie, haciendo mods para videojuegos. Disfrute mucho modeando, haciendo pixelart y texturas 2D, dediqué mi tiempo a aprender nuevos lenguajes, buscar código y ayudar a otros programadores. Termine descubriendo la programacion web, que mezcla lo que más me gusta, la lógica de programar y el estilo en diseño.</p>
+                        <h2>
+                            <Trans i18nKey="maindescription">   
+                                Desarrollador web fullstack
+                            </Trans>
+                        </h2>
+                        <p>
+                            <Trans i18nKey="fronttext">   
+                                Descubrí la programación y diseño hace 5 años, todo comenzo como un hobbie, haciendo mods para videojuegos. Disfrute mucho modeando, haciendo pixelart y texturas 2D, dediqué mi tiempo a aprender nuevos lenguajes, buscar código y ayudar a otros programadores. Termine descubriendo la programacion web, que mezcla lo que más me gusta, la lógica de programar y el estilo en diseño.
+                            </Trans>
+                        </p>
                     </div>
                 <div className='frontpage_cornerdetail'></div>
                 </div>

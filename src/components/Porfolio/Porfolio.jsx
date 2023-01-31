@@ -1,8 +1,11 @@
 
+import { Trans, useTranslation } from "react-i18next";
 import squares from "../../images/ninesquares.svg"
 import wiggle from "../../images/wiggle.svg"
 
 function Porfolio(){
+
+    const [t, i18n] = useTranslation()
 
     function handleShow(e) {
 
@@ -27,21 +30,38 @@ function Porfolio(){
                 </div>
                 <div className="projects_text">
                     <div id="1" className="project">
-                        <p>Un proyecto personal, que era para ofrecer mis servicios en internet, en ese momento solo sabia JavaScript, HTML y CSS.</p>
+                        <p>
+                            <Trans i18nKey="porfolio.mateweb">
+                                Un proyecto personal, que era para ofrecer mis servicios en internet, en ese momento solo sabia JavaScript, HTML y CSS.
+                            </Trans>
+                        </p>
                         <div className="project_links">
                             <a href="https://github.com/Koppeks/Mateweb">Github</a>
                         </div>
                     </div>
                     <div id="2" className="project">
-                        <p >Era un local de reparaciones de computadoras, necesitaba una pagina para tener mas visibilidad y aumentar el flujo de clientes.</p>
+                        <p>
+                            <Trans i18nKey="porfolio.sinnel">
+                            Era un local de reparaciones de computadoras, necesitaba una pagina para tener mas visibilidad y aumentar el flujo de clientes.
+                            </Trans>
+                        </p>
                         <div className="project_links">
                             <a href="https://github.com/Koppeks/sinnelreparaciones">Github</a>
                         </div>
                     </div>
                     <div id="3" className="project">
-                        <p >El proyecto final de el bootcamp de SoyHenry, un e-commerce de venta de componentes de pc, con API de MercadoPago, MetaMask y Auth0.</p>
+                        <p >
+                            <Trans i18nKey="porfolio.soyhenry">
+                                El proyecto final de el bootcamp de SoyHenry, un e-commerce de venta de componentes de pc, con API de MercadoPago, MetaMask y Auth0.
+                            </Trans>
+                        </p>
                         <div className="project_links">
-                            <a href="https://ecommerce-frontend-30b.vercel.app/">Ver el sitio</a>
+                            <a href="https://ecommerce-frontend-30b.vercel.app/">
+                                <Trans i18nKey="porfolio.link">
+                                    Ver el sitio
+                                </Trans>
+
+                            </a>
                             <a href="https://github.com/Koppeks/Ecommerce-Frontend-30b">Github</a>
                         </div>
                     </div>

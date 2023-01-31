@@ -143,9 +143,10 @@
                         right: 0;
                         bottom: 0;
                         padding: 10px;
-    
+                        
                         a{
-                            padding: 10px;
+                            text-decoration: none;
+                            padding: 5px;
                             color: var(--green-detail);
                         }
                     }

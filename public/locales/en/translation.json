@@ -1,0 +1,60 @@
+{
+    "maindescription": "FullStack web developer",
+    "fronttext": "I discovered programming and design 5 years ago, everything started as a hobby, making mods for video games. I enjoyed modeling, making pixelart and 2D textures, I spent my time learning new languages, searching for code and helping other programmers. I ended up discovering web programming, which mixes what I like most, the logic of programming and the style in design.",
+    "navbar": {
+        "one": "Home",
+        "four": "About me",
+        "five": "Extra",
+        "six": "Contact"
+    },
+    "stacktitle": "My stack of technologies",
+    "porfolio": {
+        "mateweb": "A personal project, which was to offer my services on the internet, at that time only wise JavaScript, HTML and CSS.",
+        "sinnel": "It was a local computer repair, needed a page to have more visibility and increase the flow of customers.",
+        "soyhenry": "The final project of the SoyHenry bootcamp, an e-commerce selling pc components, with MercadoPago, MetaMask and Auth0 APIs.",
+        "link": "See the web page"
+    },
+    "aboutme": {
+        "title": "About me",
+        "description": "I live in Argentina, I am 25 years old, I am a calm and patient person, I like football, video games, exercise that in addition to improving health I use therapeutically, beaches, 2D/3D design, taekwondo and what before considered a hobbie, today is my source of income, programming."
+    },
+    "extra": {
+        "extratitle1": "Extra Habilities",
+        "extratitle2": "My objective technologies",
+        "description2": "I want to continue expanding my knowledge into other technologies in the future, I have scraped the surface of some such as PHP, C# and C++. In the future I am intrigued to see that I can learn from those languages."
+    },
+    "contact": {
+        "title": "Contact with me",
+        "form": {
+            "name1":"Full name",
+            "placeholder1": "Write your full name in here",
+            "placeholder2": "Write your email in here",
+            "name3":"Reason of your message",
+            "placeholder3": "Write your reason of your message in here",
+            "name4":"Message",
+            "placeholder4": "Write your message in here",
+            "button": "Send"
+        }
+    },
+    "footer": "designed and built by",
+    "errors": {
+        "name": {
+            "letters": "The name must contain letters",
+            "short": "The name is too short",
+            "long": "The name is too long",
+            "specialchar": "The name cannot contain numbers or special characters"
+        },
+        "email": {
+            "valid": "You must give a valid email"
+        },
+        "reason": {
+            "short": "The reason is to short"
+        },
+        "message": {
+            "letters": "The message must contain letters",
+            "short": "The message is to short",
+            "long": "The message is to long"
+        },
+        "required": "Required"
+    }
+}

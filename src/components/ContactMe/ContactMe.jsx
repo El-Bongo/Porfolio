@@ -5,11 +5,20 @@ import { basicSchema } from "../../schemas";
 import FormInput from "../FormInputs/FormInput";
 import emailjs from "@emailjs/browser"
 import Footer from "../Footer/Footer";
+import { Trans, useTranslation } from "react-i18next";
+import i18next from "i18next";
 
 function ContactMe(){
+
+    const [t, i18n] = useTranslation()
+
     return(
         <div className="form_main section" id="sectionContact">
-            <h2>Contacta conmigo</h2>
+            <h2>
+                <Trans i18nKey="contact.title">
+                    Contacta conmigo
+                </Trans>
+            </h2>
             <Formik
                 initialValues={{name: '', email: '', reason: '', message: ''}}
                 validationSchema={basicSchema}
@@ -45,8 +54,8 @@ function ContactMe(){
                         value={name}
                         name="name"
                         error={touched.name && errors.name}
-                        placeholder="Escribe tu nombre completo aquí"
-                        label="Nombre completo"
+                        placeholder="contact.form.placeholder1"
+                        label="contact.form.name1"
                         onChange={handleChange('name')}
                         onBlur={handleBlur("name")}
                     />
@@ -54,7 +63,7 @@ function ContactMe(){
                         value={email}
                         name="email"
                         error={touched.email && errors.email}
-                        placeholder="Escribe tu email aquí"
+                        placeholder="contact.form.placeholder2"
                         label="Email"
                         onChange={handleChange('email')}
                         onBlur={handleBlur("email")}
@@ -63,8 +72,8 @@ function ContactMe(){
                         value={reason}
                         name="reason"
                         error={touched.reason && errors.reason}
-                        placeholder="Escribe el motivo de tu mensaje aquí"
-                        label="Motivo de tu mensaje"
+                        placeholder="contact.form.placeholder3"
+                        label="contact.form.name3"
                         onChange={handleChange('reason')}
                         onBlur={handleBlur("reason")}
                     />
@@ -72,16 +81,16 @@ function ContactMe(){
                         value={message}
                         name="message"
                         error={touched.message && errors.message}
-                        placeholder="Escribe tu mensaje aquí"
-                        label="Mensaje"
+                        placeholder="contact.form.placeholder4"
+                        label="contact.form.name4"
                         onChange={handleChange('message')}
                         onBlur={handleBlur("message")}
                     />
                     {
                         Object.keys(errors).length > 0 ? 
-                        <button className="button" disabled>Enviar</button>
+                        <button className="button" disabled>{i18next.t("contact.form.button")}</button>
                         :
-                        <button className="button" onClick={handleSubmit}>Enviar</button>
+                        <button className="button" onClick={handleSubmit}>{i18next.t("contact.form.button")}</button>
                     }
                 </form>
             )}}

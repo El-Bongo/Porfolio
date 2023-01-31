@@ -13,6 +13,7 @@ import sass from "../../images/StackLogos/sass.svg"
 import tailwind from "../../images/StackLogos/tailwind.svg"
 import { useState } from "react"
 import Slider from "react-slick"
+import { Trans, useTranslation } from "react-i18next"
 
 let images = [sequelize, css, express, github, html, js, materialui, node, react, reduxtoolkit, sass, tailwind]
 
@@ -59,9 +60,15 @@ function Stack() {
       focusOnSelect: true,
     }
 
+    const [t, i18n] = useTranslation()
+
     return(
         <div className='stack_container section' id="sectionStack">
-            <h2>Mi stack de tecnologías</h2>
+            <h2>
+                <Trans i18nKey="stacktitle">
+                    Mi stack de tecnologías
+                </Trans>
+            </h2>
             <div className='stack_slidercontainer'>
                 <Slider {...settings}>
                     {stack.map((e, i) =>

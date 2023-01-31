@@ -4,12 +4,16 @@ import logo from "../../images/Logo.svg"
 import discord from "../../images/Social/discord.svg"
 import github from "../../images/Social/github.svg"
 import linkedin from "../../images/Social/linkedin.svg"
+import { Trans, useTranslation } from 'react-i18next';
 
 
 
 function NavBar(){
 
   const [activeSection, setActiveSection] = useState(null);
+  const [isOpen, setIsOpen] = useState(false);
+
+  const [t, i18n] = useTranslation()
 
   useEffect(() => {
     const sections = document.querySelectorAll('.section');
@@ -50,17 +54,51 @@ function NavBar(){
     const navCuadrao = document.querySelectorAll('.nav-cuadrao');
     navCuadrao[0].classList.add('activefig');
   }, []);
+
+  const changeLanguage = (lang) =>{
+    i18n.changeLanguage(lang)
+  }
+
     return(
         <div className=' navbar_container '>
             <img src={logo} alt="logo de la pagina" />
+            <div>
+
+              <div className="dropdown" onClick={() => setIsOpen(!isOpen)}>
+                <button className="dropdown_button">{i18n.language === "es" ? "Español" : "English"}</button>
+                <div className={`dropdown_menu ${isOpen ? "dropdown_menu--active" : ""}`}>
+                  <h4 className="dropdown_option" onClick={()=> changeLanguage("es")}>Esp</h4>
+                  <h4 className="dropdown_option" onClick={()=> changeLanguage("en")}>Eng</h4>
+                </div>
+              </div>
+
+              {/* <button onClick={()=> changeLanguage("es")}>ES</button>
+              <button onClick={()=> changeLanguage("en")}>EN</button> */}
+            </div>
             <div className='nav-scrollspy'>
                 <nav>
-                    <a className="nav-link active" href="#sectionHome">Inicio</a>
+                    <a className="nav-link active" href="#sectionHome">
+                      <Trans i18nKey="navbar.one">
+                        Inicio
+                      </Trans>
+                    </a>
                     <a className="nav-link" href="#sectionStack">Stack</a>
                     <a className="nav-link" href="#sectionPorfolio">Porfolio</a>
-                    <a className="nav-link" href="#sectionAbout">Acerca de mi</a>
-                    <a className="nav-link" href="#sectionExtras">Extras</a>
-                    <a className="nav-link" href="#sectionContact">Contacto</a>
+                    <a className="nav-link" href="#sectionAbout">
+                      <Trans i18nKey="navbar.four">
+                        Acerca de mi
+                      </Trans>
+                    </a>
+                    <a className="nav-link" href="#sectionExtras">
+                      <Trans i18nKey="navbar.five">
+                        Extras
+                      </Trans>
+                    </a>
+                    <a className="nav-link" href="#sectionContact">
+                      <Trans i18nKey="navbar.six">
+                        Contacto
+                      </Trans>
+                    </a>
                 </nav>
                 <section>
                     <a className="nav-cuadrao activefig" href="#sectionHome"></a>
