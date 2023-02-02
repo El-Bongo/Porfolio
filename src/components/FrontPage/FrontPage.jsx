@@ -34,22 +34,22 @@ function FrontPage(){
                 <div className='frontpage_cornerdetail'></div>
                 </div>
                 <div className='frontpage_stack'>
-                <ul>
-                    <li><p>JavaScript</p></li>
-                    <li><p>React</p></li>
-                    <li><p>React-Native</p></li>
-                    <li><p>Sequelize</p></li>
-                    <li><p>Express</p></li>
-                    <li><p>GitHub</p></li>
-                    <li><p>Node.js</p></li>
-                    <li><p>Material-UI</p></li>
-                    <li><p>Sass</p></li>
-                    <li><p>Redux-Toolkit</p></li>
-                    <li><p>Tailwind</p></li>
-                    <li><p>CSS3</p></li>
-                    <li><p>HTML5</p></li>
-                </ul>
-            </div>
+                    <ul>
+                        <li><p>JavaScript</p></li>
+                        <li><p>React</p></li>
+                        <li><p>React-Native</p></li>
+                        <li><p>Sequelize</p></li>
+                        <li><p>Express</p></li>
+                        <li><p>GitHub</p></li>
+                        <li><p>Node.js</p></li>
+                        <li><p>Material-UI</p></li>
+                        <li><p>Sass</p></li>
+                        <li><p>Redux-Toolkit</p></li>
+                        <li><p>Tailwind</p></li>
+                        <li><p>CSS3</p></li>
+                        <li><p>HTML5</p></li>
+                    </ul>
+                </div>
             </div>
             <div>
                 <img className="detail" src={squares} alt="detail square background"/>

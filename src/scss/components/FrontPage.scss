@@ -304,6 +304,7 @@
         align-items: center;
         height: auto;
         position: relative;
+        width: 100vw;
         border-right: 0px;
         border-bottom: 0px;
         margin-right: 0;
@@ -319,7 +320,7 @@
             padding-bottom: 15vh;
 
             .frontpage_maintext{
-                width: 80vw;
+                width: 100vw;
                 transform: 0;
 
                 h1{
@@ -335,13 +336,13 @@
             }
         }
         .frontpage_stack{
-            position: relative;
+            position: unset;
             right: 0;
             top: 0;
             background-color: var(--dark-second);
             width: auto;
             height: 20vh;
-            padding: 20px;
+            padding-left: 10%;
             
             ul{ 
                 height: auto;
