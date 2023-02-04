@@ -111,9 +111,9 @@ function NavBar(){
             </div>
             <div className="navbar_social">
                 <ul>
-                  <li><a href="https://www.discord.com/users/360895618966880259"><img src={discord} alt="logo discord"/></a></li>
-                  <li><a href="https://www.linkedin.com/in/nicolas-silva/"><img src={linkedin} alt="logo linkedin"/></a></li>
-                  <li><a href="https://github.com/Koppeks"><img src={github} alt="logo github"/></a></li>
+                  <li><a href="https://www.discord.com/users/360895618966880259" target="_blank" rel="noopener noreferrer"><img src={discord} alt="logo discord"/></a></li>
+                  <li><a href="https://www.linkedin.com/in/nicolas-silva/" target="_blank" rel="noopener noreferrer"><img src={linkedin} alt="logo linkedin"/></a></li>
+                  <li><a href="https://github.com/Koppeks" target="_blank" rel="noopener noreferrer"><img src={github} alt="logo github"/></a></li>
                 </ul>
             </div>
         </div>

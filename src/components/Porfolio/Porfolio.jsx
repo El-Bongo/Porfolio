@@ -36,7 +36,7 @@ function Porfolio(){
                             </Trans>
                         </p>
                         <div className="project_links">
-                            <a href="https://github.com/Koppeks/Mateweb">Github</a>
+                            <a href="https://github.com/Koppeks/Mateweb" target="_blank" rel="noopener noreferrer">Github</a>
                         </div>
                     </div>
                     <div id="2" className="project">
@@ -46,7 +46,7 @@ function Porfolio(){
                             </Trans>
                         </p>
                         <div className="project_links">
-                            <a href="https://github.com/Koppeks/sinnelreparaciones">Github</a>
+                            <a href="https://github.com/Koppeks/sinnelreparaciones" target="_blank" rel="noopener noreferrer">Github</a>
                         </div>
                     </div>
                     <div id="3" className="project">
@@ -56,13 +56,12 @@ function Porfolio(){
                             </Trans>
                         </p>
                         <div className="project_links">
-                            <a href="https://ecommerce-frontend-30b.vercel.app/">
+                            <a href="https://ecommerce-frontend-30b.vercel.app/" target="_blank" rel="noopener noreferrer">
                                 <Trans i18nKey="porfolio.link">
                                     Ver el sitio
                                 </Trans>
-
                             </a>
-                            <a href="https://github.com/Koppeks/Ecommerce-Frontend-30b">Github</a>
+                            <a href="https://github.com/Koppeks/Ecommerce-Frontend-30b" target="_blank" rel="noopener noreferrer">Github</a>
                         </div>
                     </div>
                 </div>

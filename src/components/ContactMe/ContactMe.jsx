@@ -22,7 +22,7 @@ function ContactMe(){
             <Formik
                 initialValues={{name: '', email: '', reason: '', message: ''}}
                 validationSchema={basicSchema}
-                onSubmit={(values, formikActions) =>{
+                onSubmit={(values, {resetForm}) =>{
 
                     const data = {
                         name: values.name,
@@ -31,16 +31,10 @@ function ContactMe(){
                         message: values.message
                     }
 
-                    setTimeout(()=>{
-                        emailjs.sendForm(process.env.REACT_APP_SERVICE_ID, process.env.REACT_APP_TEMPLATE_ID, "#form", process.env.REACT_APP_PUBLIC_KEY)
-                        .then((result) => {
-                            console.log(result.text);
-                            console.log("Mensaje enviado correctamente")
-                        }, (error) => {
-                            console.log(error.text);
-                        });
-                    }, 500)
+                    emailjs.sendForm(process.env.REACT_APP_SERVICE_ID, process.env.REACT_APP_TEMPLATE_ID, "#form", process.env.REACT_APP_PUBLIC_KEY)
 
+                    resetForm()
+                    
                 }}
             >
 

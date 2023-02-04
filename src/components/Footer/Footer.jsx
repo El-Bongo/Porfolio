@@ -11,11 +11,10 @@ function Footer() {
                 <Trans i18nKey={"footer"}>
                     Diseñado y construido por
                 </Trans>
-                 <a href="https://github.com/Koppeks"> Nicolás H. Silva</a></h4>
+                 <a href="https://github.com/Koppeks" target="_blank" rel="noopener noreferrer"> Nicolás H. Silva</a></h4>
         </div>
     )
 }
-
 
 export default Footer;
 
